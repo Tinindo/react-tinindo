@@ -1,36 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
+import api from '../../services/api';
+import UsersService from '../../services/users.service';
 
 import logo from '../../assets/logo.png';
-
 import './style.css';
+import ErrorMessage from '../../components/ErrorMessage';
 
 export default function Login() {
+    const usersService = new UsersService(api);
+    const history = useHistory();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [authError, setAuthError] = useState(false);
+
+    function handleLogin(event) {
+        event.preventDefault();
+
+        console.log({ email, password })
+
+        usersService.login({ email, password })
+            .then(() => history.push('/services'))
+            .catch(error => {
+                console.log(error);
+                setAuthError(error.data)
+            });
+    }
+
     return (
-        <div class="container">
-            <div class="box-left content-left row">
-                <div class="content-left column">
+        <div className="container">
+            <div className="box-left content-left row">
+                <div className="content-left column">
                     <img src={logo} width="364" height="149" />
                 </div>
             </div>
-            <div class="box-right content-right column">
-                <div class="margin-content">
-                    <h1 class="title-login">Fazer login</h1>
+            <div className="box-right content-right column">
+                <div className="margin-content">
+                    <h1 className="title-login">Fazer login</h1>
                 </div>
-                <div class="content-left column">
-                    <form action="js/main.js" method="POST">
-                        <label class="font-color" for="email">E-mail:</label>
-                        <input class="input-style font-color" type="email" id="email" name="email" />
-                        <label class="font-color" for="pass">Senha:</label>
-                        <input class="input-style font-color" type="password" id="pass" name="pass" />
-                        <div class="align-content-input">
-                            <input class="ckb-style" type="checkbox" id="lbm" name="lbm" />
-                            <label class="font-color lbm-check" for="lbm">Lembrar-me</label>
-                            <a class="link-style margin-left" href="#">Esqueci minha senha</a>
+                <div className="content-left column">
+                    <form onSubmit={handleLogin}>
+                        <label className="font-color" for="email">E-mail:</label>
+                        <input className="input-style font-color"
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={email}
+                            onChange={event => setEmail(event.target.value)} />
+
+                        <label className="font-color" for="password">Senha:</label>
+                        <input className="input-style font-color"
+                            type="password"
+                            id="password"
+                            name="password"
+                            value={password}
+                            onChange={event => setPassword(event.target.value)} />
+
+                        <div className="align-content-input">
+                            <input className="ckb-style" type="checkbox" id="lbm" name="lbm" />
+                            <label className="font-color lbm-check" for="lbm">Lembrar-me</label>
                         </div>
-                        <input class="btn-style" type="submit" value="Entrar" />
+                        <input className="btn-style" type="submit" value="Entrar" />
                     </form>
-                    <div class="content-left margin-top">
-                        <a class="link-style" href="register.html">Não possue uma conta? Cadastra-se</a>
+                    <div className="content-left margin-top">
+                        <Link to='/create-user'>Não possui uma conta? Cadastre-se</Link>
                     </div>
                 </div>
             </div>

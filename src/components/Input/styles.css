@@ -1,0 +1,11 @@
+.input-block {
+    border: 1px solid #D3E2E5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #F5F8FA;
+    width: 360px;
+    height: 64px;
+    margin: 2% 0px;
+    padding: 15px;
+    color: #8FA7B3;
+}
