@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
+import Input from '../../components/Input';
+
 import api from '../../services/api';
 import UsersService from '../../services/users.service';
 
-import logo from '../../assets/logo.png';
+import logo from '../../assets/images/logo.png';
 import './style.css';
-import ErrorMessage from '../../components/ErrorMessage';
+// import ErrorMessage from '../../components/ErrorMessage';
 
 export default function Login() {
     const usersService = new UsersService(api);
@@ -42,16 +44,16 @@ export default function Login() {
                 </div>
                 <div className="content-left column">
                     <form onSubmit={handleLogin}>
-                        <label className="font-color" for="email">E-mail:</label>
-                        <input className="input-style font-color"
+                        <Input
+                            label='E-mail'
                             type="email"
                             id="email"
                             name="email"
                             value={email}
                             onChange={event => setEmail(event.target.value)} />
 
-                        <label className="font-color" for="password">Senha:</label>
-                        <input className="input-style font-color"
+                        <Input
+                            label='Senha'
                             type="password"
                             id="password"
                             name="password"
@@ -65,7 +67,9 @@ export default function Login() {
                         <input className="btn-style" type="submit" value="Entrar" />
                     </form>
                     <div className="content-left margin-top">
-                        <Link to='/create-user'>Não possui uma conta? Cadastre-se</Link>
+                        <Link className='link-style link-style-menu' to='/register'>
+                            Não possui uma conta? Cadastre-se
+                        </Link>
                     </div>
                 </div>
             </div>

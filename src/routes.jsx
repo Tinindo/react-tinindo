@@ -9,7 +9,7 @@ import ServicesList from './pages/ServicesList';
 export default function Routes() {
     return (
         <BrowserRouter>
-            <Route path='/create-user' exact component={CreateUser} />
+            <Route path='/register' exact component={CreateUser} />
             <Route path='/services' exact component={ServicesList} />
             <Route path='/' exact component={Login} />
         </BrowserRouter>

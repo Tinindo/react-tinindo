@@ -1,0 +1,31 @@
+.btn-style {
+    margin: 2rem auto;
+    height: 5rem;
+    border: 0;
+    cursor: pointer;
+    background: #3cdc8c;
+    border-radius: 17px;
+    color: #ffffff;
+    font-weight: 650;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    /* margin-top: 10%;
+    width: 360px;
+    height: 64px;
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    background: #85E8BE;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    border: 0;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.2s; */
+}
+
+.btn-style:hover {
+    background: #37C77F;
+}

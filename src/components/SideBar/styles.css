@@ -1,0 +1,48 @@
+.menu {
+    position: fixed;
+    background-color: #15C3D6;
+    height: 100vh;
+    width: 5%;
+}
+
+.back-icon {
+    display: flex;
+    text-decoration: none;
+}
+
+.back-icon img {
+    position: fixed;
+    bottom: 22px;
+    left: 36px;
+}
+
+#logo-menu {
+    justify-content: center;
+    align-items: center;
+    margin: 20%;
+    display: flex;
+}
+
+.back-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 24px;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: #12AFCB;
+}
+
+.link-style-menu:hover::before {
+    background-color: #17D6EB;
+}
+
+.img-position {
+    position: sticky;
+    bottom: 22px;
+    justify-self: center;
+    left: 36px;
+}
