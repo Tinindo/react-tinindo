@@ -5,7 +5,7 @@
 
 #page-create-user main {
     max-width: 700px;
-    max-height: 1100px;
+    max-height: 1300px;
     margin: 3.2rem auto;
     background-color: white;
     border: 1px solid #D3E2E5;
@@ -26,7 +26,6 @@
 
 #page-create-user main form {
     width: 90%;
-    height: 100%;
     margin-top: 7% 0%;
 }
 

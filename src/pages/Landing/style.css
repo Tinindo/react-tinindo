@@ -1,0 +1,27 @@
+body {
+    /* Home */
+    position: relative;
+    width: 1440px;
+    height: 820px;
+    /* Gradiente / Blue */
+    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    font-family: 'Nunito';
+}
+
+.logo {
+    /* image-removebg-preview 1 */
+    position: absolute;
+    width: 518px;
+    height: 188px;
+    left: 129px;
+    top: 136px;
+}
+
+.btnDiarista {
+    /* Login */
+    position: absolute;
+    width: 222px;
+    height: 56px;
+    left: 1169px;
+    top: 44px;
+}

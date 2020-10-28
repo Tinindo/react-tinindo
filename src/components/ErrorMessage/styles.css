@@ -1,3 +1,15 @@
 .error-block {
-    color: red
+    border: 0;
+    border-radius: 2rem;
+    background-color: red;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error-block h3 {
+    font-weight: 700;
 }

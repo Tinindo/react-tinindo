@@ -24,6 +24,7 @@ body {
 .content-right {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .column {
@@ -38,6 +39,7 @@ body {
     width: 37%;
     height: 100vh;
     background-color: white;
+    align-items: center;
 }
 
 .margin-content {
@@ -50,7 +52,7 @@ body {
 
 .title-login {
     color: #5C8599;
-    margin-bottom: 8%;
+    margin-bottom: 3rem;
 }
 
 input {

@@ -8,6 +8,7 @@ import UsersService from '../../services/users.service';
 
 import logo from '../../assets/images/logo.png';
 import './style.css';
+import ErrorMessage from '../../components/ErrorMessage';
 // import ErrorMessage from '../../components/ErrorMessage';
 
 export default function Login() {
@@ -26,8 +27,9 @@ export default function Login() {
         usersService.login({ email, password })
             .then(() => history.push('/services'))
             .catch(error => {
+                error = error.toJSON();
                 console.log(error);
-                setAuthError(error.data)
+                setAuthError(error);
             });
     }
 
@@ -39,9 +41,9 @@ export default function Login() {
                 </div>
             </div>
             <div className="box-right content-right column">
-                <div className="margin-content">
-                    <h1 className="title-login">Fazer login</h1>
-                </div>
+                <h1 className="title-login">Efetuar login</h1>
+                {authError &&
+                    <ErrorMessage message='Combinação de usuário e senha inválidas' />}
                 <div className="content-left column">
                     <form onSubmit={handleLogin}>
                         <Input
@@ -62,7 +64,7 @@ export default function Login() {
 
                         <div className="align-content-input">
                             <input className="ckb-style" type="checkbox" id="lbm" name="lbm" />
-                            <label className="font-color lbm-check" for="lbm">Lembrar-me</label>
+                            <label className="font-color lbm-check" htmlFor="lbm">Lembrar-me</label>
                         </div>
                         <input className="btn-style" type="submit" value="Entrar" />
                     </form>
