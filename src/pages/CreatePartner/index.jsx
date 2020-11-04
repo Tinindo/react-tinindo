@@ -91,6 +91,7 @@ export default function CreatePartner() {
                         />
 
                         <p>Especialidade</p>
+
                         {specialties.map(specialty =>
                             <CheckBox
                                 name={specialty.specialty_id}
@@ -105,6 +106,7 @@ export default function CreatePartner() {
                         <Input />
 
                         <GreenButton label='Cadastrar' />
+
                     </fieldset>
                 </form>
             </main>
