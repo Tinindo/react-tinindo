@@ -15,22 +15,16 @@ export default function Login() {
     const usersService = new UsersService(api);
     const history = useHistory();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [authError, setAuthError] = useState(false);
+    function handleClickCreatePartner(){
+        history.push("/virar-parceiro");
+    }
 
-    function handleLogin(event) {
-        event.preventDefault(); //não deixa a pagina recarregar/*
+    function handleClickCreateUser(){
+        history.push("/cadastrar-usuario");
+    }
 
-        console.log({ email, password })
-
-        usersService.login({ email, password })
-            .then(() => history.push('/services'))
-            .catch(error => {
-                error = error.toJSON();
-                console.log(error);
-                setAuthError(error);
-            });
+    function handleClickLogin(){
+        history.push("/Login");
     }
 
     return (
@@ -40,9 +34,9 @@ export default function Login() {
             <img src={woman2} width="550" height="600"/>
             
            <div className="front-text">A forma mais confiável de contratar seu serviço de limpeza! </div>
-           <div className="btn-diarista">Seja uma Diarista</div>
-           <div className="btn-nao-possui-conta">Não possui conta?</div>
-           <div className="btn-ja-cliente">Já sou Cliente</div>
+           <div className="btn-diarista" onClick={handleClickCreatePartner}>Seja uma Diarista</div>
+           <div className="btn-nao-possui-conta" onClick={handleClickCreateUser}>Não possui conta?</div>
+           <div className="btn-ja-cliente" onClick={handleClickLogin}>Já sou Cliente</div>
         </div>
     );
 }
