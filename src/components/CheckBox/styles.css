@@ -1,0 +1,23 @@
+#checkbox-label {
+    position: relative;
+}
+
+.checkbox-value {
+    display: none;
+}
+
+.checkbox-value::before {
+    content: '';
+    position: fixed;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: solid 1px #D3E2E5;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.checkbox input:checked+#checkbox-label::before {
+    background-color: #37C77F;
+}

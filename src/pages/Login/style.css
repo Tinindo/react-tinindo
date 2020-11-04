@@ -118,6 +118,10 @@ input:checked+.lbm-check::before {
     background-color: #37C77F;
 }
 
+#partner-invite {
+    position: relative;
+}
+
 .link-style {
     text-decoration: none;
     color: #8FA7B3;

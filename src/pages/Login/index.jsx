@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
 import Input from '../../components/Input';
+import ErrorMessage from '../../components/ErrorMessage';
 
 import api from '../../services/api';
 import UsersService from '../../services/users.service';
 
 import logo from '../../assets/images/logo.png';
+
 import './style.css';
-import ErrorMessage from '../../components/ErrorMessage';
-// import ErrorMessage from '../../components/ErrorMessage';
 
 export default function Login() {
     const usersService = new UsersService(api);
@@ -69,8 +69,14 @@ export default function Login() {
                         <input className="btn-style" type="submit" value="Entrar" />
                     </form>
                     <div className="content-left margin-top">
-                        <Link className='link-style link-style-menu' to='/register'>
-                            Não possui uma conta? Cadastre-se
+                        <Link className='link-style link-style-menu' to='/cadastrar-usuario'>
+                            Ainda não possui uma conta? Cadastre-se clicando aqui.
+                        </Link>
+                    </div>
+                    <br />
+                    <div className="content-left margin-top" id='partner-invite'>
+                        <Link className='link-style link-style-menu' to='/virar-parceiro'>
+                            É uma diarista? Torne-se nosso parceiro!
                         </Link>
                     </div>
                 </div>
