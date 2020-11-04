@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import CreateUser from './pages/CreateUser';
 import ServicesList from './pages/ServicesList';
 import CreatePartner from './pages/CreatePartner';
+import Landing from './pages/Landing';
 
 export default function Routes() {
     return (
@@ -13,7 +14,8 @@ export default function Routes() {
             <Route path='/cadastrar-usuario' exact component={CreateUser} />
             <Route path='/virar-parceiro' exact component={CreatePartner} />
             <Route path='/services' exact component={ServicesList} />
-            <Route path='/' exact component={Login} />
+            <Route path='/login' exact component={Login} />
+            <Route path='/' exact component={Landing} />
         </BrowserRouter>
     );
 }

@@ -1,27 +1,104 @@
 body {
-    /* Home */
-    position: relative;
-    width: 1440px;
-    height: 820px;
-    /* Gradiente / Blue */
-    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    margin: 0px;
     font-family: 'Nunito';
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    display: flex;
+}
+
 .logo {
-    /* image-removebg-preview 1 */
-    position: absolute;
     width: 518px;
     height: 188px;
     left: 129px;
     top: 136px;
 }
 
-.btnDiarista {
-    /* Login */
+.front-text {
+    position: absolute;
+    left: 14.17%;
+    right: 56.81%;
+    top: 58.29%;
+    bottom: 28.05%;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 56px;
+
+    text-align: right;
+    font-feature-settings: 'salt' on;
+
+    color: #FFFFFF;
+}
+
+.btn-diarista {
+    width: 222px;
+    height: 56px;
+    left: 900px;
+    top: 55px;
+    background: #12D4E0;
+    border-radius: 20px;
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    text-align: center;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.btn-diarista:hover {
+    background: #96FEFF;
+}
+.btn-nao-possui-conta {
+    width: 222px;
+    height: 56px;
+    left: 129px;
+    top: 550px;
+    background: #1B8288;
+    border-radius: 20px;
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    text-align: center;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.btn-nao-possui-conta:hover{
+    background: #1DADB6;
+}
+
+.btn-ja-cliente {
     position: absolute;
     width: 222px;
     height: 56px;
-    left: 1169px;
-    top: 44px;
+    left: 400px;
+    top: 550px;
+    background: #12D4E0;
+    border-radius: 20px;
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    text-align: center;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.btn-ja-cliente:hover {
+    background: #96FEFF;
+    color: #15C3D6;
 }
