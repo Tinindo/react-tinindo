@@ -1,104 +1,76 @@
-body {
-    margin: 0px;
-    font-family: 'Nunito';
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
-    display: flex;
-}
-
-.logo {
-    width: 518px;
-    height: 188px;
-    left: 129px;
-    top: 136px;
-}
-
-.front-text {
+.img-index-position{
     position: absolute;
-    left: 14.17%;
-    right: 56.81%;
-    top: 58.29%;
-    bottom: 28.05%;
+    right: 0px;
+    bottom: 0px;
+}
 
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 800;
+.logo-config{
+    position: absolute;
+    top: 10.6%;
+    left: 10%;
+    width: 30%;
+    height: 23%;
+}
+
+.font-index{
+    color: white;
+}
+
+.p-size{
     font-size: 24px;
-    line-height: 56px;
+}
 
+.logo-index{
     text-align: right;
-    font-feature-settings: 'salt' on;
-
-    color: #FFFFFF;
+    position: absolute;
+    left: 15.2%;
+    bottom: 27%;
+    width: 29%;
+    height: 13.7%;
 }
 
-.btn-diarista {
-    width: 222px;
-    height: 56px;
-    left: 900px;
-    top: 55px;
-    background: #12D4E0;
-    border-radius: 20px;
-    color: white;
-    transition-duration: 0.4s;
+.div-button{
     position: absolute;
-    text-align: center;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 800;
+    top: 8%;
+    right: 1%;
+    width: 25%;
+}
+
+.div-buttons{
+    position: absolute;
+    bottom: 14%;
+    left: 7%;
+    width: 50%;
+}
+
+.button-style{
+    padding: 2%;
     font-size: 20px;
-    line-height: 50px;
-}
-
-.btn-diarista:hover {
-    background: #96FEFF;
-}
-.btn-nao-possui-conta {
-    width: 222px;
-    height: 56px;
-    left: 129px;
-    top: 550px;
-    background: #1B8288;
+    text-decoration: none;
     border-radius: 20px;
-    color: white;
-    transition-duration: 0.4s;
-    position: absolute;
-    text-align: center;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 50px;
+    margin: 3%;
+} 
+
+.color-button-1{
+    background-color: #1B8288;
 }
 
-.btn-nao-possui-conta:hover{
-    background: #1DADB6;
+.color-button-1:hover{
+    background-color: #1DADB6;
 }
 
-.btn-ja-cliente {
-    position: absolute;
-    width: 222px;
-    height: 56px;
-    left: 400px;
-    top: 550px;
-    background: #12D4E0;
-    border-radius: 20px;
-    color: white;
-    transition-duration: 0.4s;
-    position: absolute;
-    text-align: center;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 50px;
+.padding-button-2{
+    padding: 2% 9%;
 }
 
-.btn-ja-cliente:hover {
-    background: #96FEFF;
-    color: #15C3D6;
+.padding-button-3{
+    padding: 4% 9%;
+}
+
+.color-button-2{
+    background-color: #12D4E0;
+}
+
+.color-button-2:hover{
+    background-color: #96FEFF;
 }

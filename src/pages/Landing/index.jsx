@@ -5,8 +5,7 @@ import api from '../../services/api';
 import UsersService from '../../services/users.service';
 
 import logo from '../../assets/images/logo.png';
-import woman1 from '../../assets/images/woman1.png';
-import woman2 from '../../assets/images/woman2.png';
+import womans from '../../assets/images/womans.png'
 
 import './style.css';
 
@@ -29,14 +28,20 @@ export default function Login() {
 
     return (
         <div className="container">
-            <img src={logo} width="364" height="149" />
-            <img src={woman1} width="600" height="600"/>
-            <img src={woman2} width="550" height="600"/>
-            
-           <div className="front-text">A forma mais confiável de contratar seu serviço de limpeza! </div>
-           <div className="btn-diarista" onClick={handleClickCreatePartner}>Seja uma Diarista</div>
-           <div className="btn-nao-possui-conta" onClick={handleClickCreateUser}>Não possui conta?</div>
-           <div className="btn-ja-cliente" onClick={handleClickLogin}>Já sou Cliente</div>
+            <img className="img-index-position" src={womans} width="59%" height="83%"/>
+            <div className="div-button">
+                <Link className="button-style padding-button-3 color-button-2 font-index" to='/virar-parceiro'>Seja uma Diarista</Link>
+            </div>
+            <div className="logo-config">
+                <img src={logo} width="100%" height="100%"/>
+            </div>
+            <div className="logo-index">
+                <p className="font-index p-size">A forma mais confiável de contratar seu serviço de limpeza!</p>
+            </div>
+            <div className="div-buttons">
+                <Link className="button-style color-button-1 font-index" to='/cadastrar-usuario'>Não possuo uma conta</Link>
+                <Link className="button-style padding-button-2 color-button-2 font-index" to='/Login'>Já sou cliente</Link>
+            </div>
         </div>
     );
 }
