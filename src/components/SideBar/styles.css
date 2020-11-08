@@ -13,7 +13,7 @@
 .back-icon img {
     position: fixed;
     bottom: 22px;
-    left: 24px;
+    left: 1.7%;
 }
 
 #logo-menu {
@@ -27,7 +27,7 @@
     content: "";
     position: absolute;
     bottom: 10px;
-    left: 12px;
+    left: 16%;
     width: 48px;
     height: 48px;
     display: inline-block;

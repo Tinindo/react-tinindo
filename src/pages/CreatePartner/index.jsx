@@ -6,6 +6,7 @@ import SideBar from '../../components/SideBar';
 import GreenButton from '../../components/GreenButton';
 import CheckBox from '../../components/CheckBox';
 import Input from '../../components/Input';
+import InputYesNo from '../../components/InputYesNo';
 
 import './styles.css';
 
@@ -19,6 +20,7 @@ export default function CreatePartner() {
     const [document, setDocument] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [birthDate, setBirthDate] = useState('');
+    const [dailyRate, setDailyRate] = useState('');
 
     useEffect(() => {
         api.get('/specialties')
@@ -38,7 +40,7 @@ export default function CreatePartner() {
             <SideBar />
 
             <main>
-                <h1>Cadastrar parceiro</h1>
+                <h1>Cadastrar Parceiro</h1>
 
                 <div id='avatar-container'>
                     <div id="user-avatar"></div>
@@ -90,7 +92,7 @@ export default function CreatePartner() {
                             onChange={(event) => setDocument(event.target.value)}
                         />
 
-                        <p>Especialidade</p>
+                        <p className="font-color">Especialidade:</p>
 
                         {specialties.map(specialty =>
                             <CheckBox
@@ -100,10 +102,16 @@ export default function CreatePartner() {
                                 onChange={(event) => setSpecialties([...specialties, event.target.value])}
                                 value={specialty.specialty_id} />
                         )}
-
-                        <Input />
-                        <Input />
-                        <Input />
+                        <p className="font-color">Pessoa jurídica?</p>
+                        <InputYesNo id="1"/>
+                        <Input 
+                            label="Valor médio da diária: "
+                            name="dailyRate"
+                            type="number"
+                            onChange={(event) => setDailyRate(event.target.value)}
+                        />
+                        <p className="font-color">Aceita propostas mensais?</p>
+                        <InputYesNo id="2"/>
 
                         <GreenButton label='Cadastrar' />
 
