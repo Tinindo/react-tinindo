@@ -26,10 +26,6 @@
     background-color: #F5F8FA;
 }
 
-.radio-label-yes::before{
-
-}
-
 .radio-label-no::before{
     left: 243px;
 }
