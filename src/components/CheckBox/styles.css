@@ -22,3 +22,8 @@
 input:checked+.checkbox-label::before {
     background-color: #37C77F;
 }
+
+.checkbox-container{
+    float: left;
+    margin: 0% 30% 2% 0%;
+}

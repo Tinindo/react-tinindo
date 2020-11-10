@@ -57,3 +57,13 @@
 #page-create-partner main form button {
     align-self: center;
 }
+
+.div-container{
+    margin: 1% 0% 20% 5%;
+}
+
+.textarea-style{
+    border-color: #D3E2E5;
+    margin: 1% 0%;
+    color: #8FA7B3;
+}

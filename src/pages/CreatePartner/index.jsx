@@ -93,15 +93,17 @@ export default function CreatePartner() {
                         />
 
                         <p className="font-color">Especialidade:</p>
-
-                        {specialties.map(specialty =>
+                        <div className="div-container">
+                            {specialties.map(specialty =>
                             <CheckBox
                                 name={specialty.specialty_id}
                                 label={specialty.specialty_name}
                                 key={specialty.specialty_id}
                                 onChange={(event) => setSpecialties([...specialties, event.target.value])}
                                 value={specialty.specialty_id} />
-                        )}
+                            )}
+                        </div>
+                        
                         <p className="font-color">Pessoa jurídica?</p>
                         <InputYesNo id="1"/>
                         <Input 
@@ -112,6 +114,9 @@ export default function CreatePartner() {
                         />
                         <p className="font-color">Aceita propostas mensais?</p>
                         <InputYesNo id="2"/>
+                        
+                        <label className="font-color" htmlFor="bio">Biografia:</label>
+                        <textarea className="textarea-style" name="bio" id="bio" cols="70" rows="4"></textarea>
 
                         <GreenButton label='Cadastrar' />
 

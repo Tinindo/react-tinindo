@@ -3,7 +3,7 @@
 }
 
 .radio-container{
-    margin: 1% 0%;
+    margin: 1% 0% 6%;
 }
 
 .radio-label{
@@ -21,13 +21,31 @@
     content: '';
     position: absolute;
     width: 275px;
-    height: 64px;
+    height: 55px;
     border: 1px solid #D3E2E5;
     background-color: #F5F8FA;
 }
 
+.radio-label-yes::before{
+    top: -14px;
+    left: -118px;
+    border-radius: 20px 0px 0px 20px;
+}
+
 .radio-label-no::before{
-    left: 243px;
+    top: -15px;
+    left: -120px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.radio-label-no{
+    left: 364px;
+    top: 15px;
+}
+
+.radio-label-yes{
+    left: 118px;
+    top: 14px;
 }
 
 input:checked+.radio-label::before{
