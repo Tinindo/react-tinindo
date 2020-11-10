@@ -9,9 +9,9 @@ export default function InputYesNo({id}){
 
     return(
         <div className="radio-container">
-            <input className="input-radio" type="radio" id={idYes} name={name}/>
+            <input className="input-radio" type="radio" id={idYes} name={name} value="1"/>
             <label className="radio-label radio-label-yes font-color-radio" htmlFor={idYes}>Sim</label>
-            <input className="input-radio" type="radio" id={idNo} name={name}/>
+            <input className="input-radio" type="radio" id={idNo} name={name} value="0"/>
             <label className="radio-label radio-label-no font-color-radio" htmlFor={idNo}>Não</label>
         </div>
     );
