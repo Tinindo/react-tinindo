@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState, useContext } from 'react'
+import { Link } from 'react-router-dom';
+
+import { Context } from '../../contexts/AuthContext';
+
+import history from '../../history';
+
+import api from '../../services/api';
 
 import Input from '../../components/Input';
 import ErrorMessage from '../../components/ErrorMessage';
-
-import api from '../../services/api';
-import UsersService from '../../services/users.service';
 
 import logo from '../../assets/images/logo.png';
 
 import './style.css';
 
 export default function Login() {
-    const usersService = new UsersService(api);
-    const history = useHistory();
+    let { handleAuthentication } = useContext(Context);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -22,12 +24,24 @@ export default function Login() {
     function handleLogin(event) {
         event.preventDefault();
 
-        console.log({ email, password })
+        console.log({ email, password });
 
-        usersService.login({ email, password })
-            .then(() => history.push('/services'))
+        api.post('sessions', { email, password })
+            .then((response) => {
+                console.log(response);
+
+                const token = `Bearer ${response.data.token}`;
+
+                handleAuthentication(token);
+
+                localStorage.setItem('token', token);
+                localStorage.setItem('user', JSON.stringify(response.data.user));
+
+                api.defaults.headers.Authorization = token;
+
+                history.push('/parceiros');
+            })
             .catch(error => {
-                error = error.toJSON();
                 console.log(error);
                 setAuthError(error);
             });
