@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
+import history from '../../history';
 
 import parseDate from '../../helpers/parseDate';
 
@@ -13,8 +13,6 @@ import ErrorMessage from '../../components/ErrorMessage';
 import './styles.css';
 
 export default function CreateUser() {
-    const history = useHistory();
-
     const [errorMessage, setErrorMessage] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

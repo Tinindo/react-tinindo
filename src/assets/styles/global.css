@@ -23,7 +23,8 @@ body, input, button, textarea {
 }
 
 .container {
-    width: 90vw;
+    width: 100vw;
+    height: 100vh;
 }
 
 @media (min-width: 700px) {
