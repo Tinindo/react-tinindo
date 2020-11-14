@@ -20,6 +20,8 @@ export default function CreatePartner() {
 
     const [specialties, setSpecialties] = useState([]);
 
+    const [partnerSpecialties, setPartnerSpecialties] = useState([]);
+
     const [bio, setBio] = useState('');
     const [firstName, setFirstName] = useState('');
     const [acceptsMensalProposals, setAcceptsMensalProposals] = useState(false);
@@ -156,7 +158,7 @@ export default function CreatePartner() {
                                     name={specialty.specialty_id}
                                     label={specialty.specialty_name}
                                     key={specialty.specialty_id}
-                                    onChange={(event) => setSpecialties([...specialties, event.target.value])}
+                                    onChange={(event) => setPartnerSpecialties([...partnerSpecialties, event.target.value])}
                                     value={specialty.specialty_id} />
                             )}
                         </div>
@@ -179,7 +181,7 @@ export default function CreatePartner() {
 
                         <InputYesNo id="2"
                             value={acceptsMensalProposals}
-                            onChange={(event) => setAcceptsMensalProposals(event.taget.value)} />
+                            onChange={(event) => setAcceptsMensalProposals(event.target.value)} />
 
                         <label className="font-color" htmlFor="bio">Biografia:</label>
 
