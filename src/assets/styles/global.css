@@ -1,3 +1,25 @@
+:root {
+    font-size: 60%;
+    --color-background: #D3E2E5;
+    --color-primary-lighter: #15D3D6;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #15B6D6;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +31,7 @@ html, body, #root {
 }
 
 body {
-    background-color: #D3E2E5
+    background-color: var(--color-background);
 }
 
 #root {
@@ -20,6 +42,7 @@ body {
 
 body, input, button, textarea {
     font: 500 1.6rem Nunito;
+    color: var(--color-text-base)
 }
 
 .container {

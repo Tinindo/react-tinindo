@@ -4,12 +4,14 @@
     border: 0;
     cursor: pointer;
     background: #3cdc8c;
-    border-radius: 17px;
+    border-radius: 1.5rem;
     color: #ffffff;
     font-weight: 650;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 2rem;
     transition: background-color 0.2s;
     /* margin-top: 10%;
     width: 360px;

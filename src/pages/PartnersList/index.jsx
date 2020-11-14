@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
 import PartnerItem from '../../components/PartnerItem';
-import SideBar from '../../components/SideBar';
+// import SideBar from '../../components/SideBar';
+import UserMenu from '../../components/UserMenu';
 
 import './styles.css';
 
@@ -21,11 +22,10 @@ export default function PartnersList() {
 
     return (
         <div id='page-partners-list'>
-            <SideBar />
+            <UserMenu />
+
             <main>
                 <h1>Parceiros disponíveis</h1>
-
-                <br />
 
                 <div id='partners-list'>
                     {partners.map((partner) => (

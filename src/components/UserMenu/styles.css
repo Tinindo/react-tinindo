@@ -1,0 +1,38 @@
+#user-menu {
+    height: 100vh;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    position: fixed;
+    box-sizing: content-box;
+    font-size: 2rem;
+    color: var(--color-box-base);
+    background: linear-gradient(180deg, #15B6D6 0%, #15D3D6 99.99%, rgba(21, 214, 214, 0) 100%);
+    padding: 1rem 2rem;
+}
+
+#user-menu header {
+    flex-direction: row;
+}
+
+#avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+#user-menu p {
+    margin: 3rem 0;
+}
+
+#user-menu article {
+    margin: 3rem 0;
+}
+
+#logout-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    align-self: flex-end;
+    float: right;
+}
