@@ -1,0 +1,58 @@
+#page-create-house {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#page-create-house main {
+    max-height: 1500px;
+    margin: 3.2rem auto;
+    width: 80%;
+    background-color: white;
+    border: 1px solid #D3E2E5;
+    box-sizing: border-box;
+    grid-column-start: 2;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-create-house main h1 {
+    color: var(--color-text-title);
+    border-bottom: 1px solid var(--color-line-in-white);
+    padding: 0 2rem;
+    font-weight: 700;
+    margin: 3rem auto;
+    width: 90%;
+    text-align: center;
+}
+
+#page-create-house main form {
+    width: 90%;
+    margin-top: 7% 0%;
+}
+
+#page-create-house main form fieldset {
+    border: 0;
+    padding: 0 2.4rem;
+}
+
+#page-create-house main form fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+#page-create-house main form button {
+    align-self: center;
+}
+
+.div-container{
+    margin: 1% 0% 20% 5%;
+}
+
+.textarea-style{
+    border-color: #D3E2E5;
+    margin: 1% 0%;
+    color: #8FA7B3;
+}

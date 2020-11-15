@@ -42,6 +42,8 @@ export default function UserMenu() {
                 <GreenButton label='Minha conta' onClick={() => history.push('/minha-conta')} />
                 <GreenButton label='Minha agenda' onClick={() => history.push('/agenda')} />
                 <GreenButton label='Meu histórico' onClick={() => history.push('/historico')} />
+                <GreenButton label='Cadastrar imóvel' onClick={() => history.push('/cadastrar-imovel')} />
+
             </article>
         </nav>
     );

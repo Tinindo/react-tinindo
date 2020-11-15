@@ -8,6 +8,7 @@ import CreateUser from './pages/CreateUser';
 import PartnersList from './pages/PartnersList';
 import CreatePartner from './pages/CreatePartner';
 import Landing from './pages/Landing';
+import CreateHouse from './pages/CreateHouse';
 
 function CustomRoute({ isPrivate, ...rest }) {
     const { authenticated, loading } = useContext(Context);
@@ -26,6 +27,7 @@ function CustomRoute({ isPrivate, ...rest }) {
 export default function Routes() {
     return (
         <Switch>
+            <CustomRoute path='/cadastrar-imovel' isPrivate exact component={CreateHouse} />
             <CustomRoute path='/cadastrar-usuario' exact component={CreateUser} />
             <CustomRoute path='/virar-parceiro' exact component={CreatePartner} />
             <CustomRoute path='/parceiros' isPrivate exact component={PartnersList} />
