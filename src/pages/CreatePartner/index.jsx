@@ -47,6 +47,8 @@ export default function CreatePartner() {
         (async () => {
             event.preventDefault();
 
+            console.log({ acceptsMensalProposals, isCorporate })
+
             const parsedBirthDate = parseDate(birthDate);
 
             const response = await api.post('/partners', {
@@ -88,15 +90,15 @@ export default function CreatePartner() {
     }
 
     function handleSelectSpecialty(specialty) {
-        const selectedSpecialty = partnerSpecialties.findIndex(spec => spec === specialty);
+        const alreadySelected = partnerSpecialties.findIndex(spec => spec === specialty);
 
-        if (selectedSpecialty >= 0) {
+        if (alreadySelected >= 0) {
             const selectedSpecialties = partnerSpecialties.filter(spec => spec !== specialty);
             setPartnerSpecialties(selectedSpecialties);
-        } else {
-            setPartnerSpecialties([...partnerSpecialties, specialty]);
-        }
 
+        } else {
+            setPartnerSpecialties([...partnerSpecialties, { specialty_name: specialty }]);
+        }
     }
 
     return (
@@ -170,8 +172,7 @@ export default function CreatePartner() {
                                     name={specialty.specialty_id}
                                     label={specialty.specialty_name}
                                     key={specialty.specialty_id}
-                                    value={specialty}
-                                    onClick={handleSelectSpecialty} />
+                                    onClick={() => handleSelectSpecialty(specialty.specialty_name)} />
                             )}
                         </div>
 

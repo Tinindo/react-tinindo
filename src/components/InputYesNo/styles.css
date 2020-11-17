@@ -1,22 +1,22 @@
-.input-radio{
+.input-radio {
     display: none;
 }
 
-.radio-container{
+.radio-container {
     margin: 1% 0% 6%;
 }
 
-.radio-label{
+.radio-label {
     position: relative;
 }
 
-.font-color-radio{
+.font-color-radio {
     z-index: 1;
     color: #5C8599;
     font-size: 19px;
 }
 
-.radio-label::before{
+.radio-label::before {
     z-index: -1;
     content: '';
     position: absolute;
@@ -26,33 +26,33 @@
     background-color: #F5F8FA;
 }
 
-.radio-label-yes::before{
+.radio-label-yes::before {
     top: -14px;
     left: -118px;
     border-radius: 20px 0px 0px 20px;
 }
 
-.radio-label-no::before{
+.radio-label-no::before {
     top: -15px;
     left: -120px;
     border-radius: 0px 20px 20px 0px;
 }
 
-.radio-label-no{
+.radio-label-no {
     left: 364px;
     top: 15px;
 }
 
-.radio-label-yes{
+.radio-label-yes {
     left: 118px;
     top: 14px;
 }
 
-input:checked+.radio-label::before{
+input:checked+.radio-label::before {
     border: 1px solid #A1E9C5;
     background-color: #EDFFF6;
 }
 
-input:checked+.font-color-radio{
+input:checked+.font-color-radio {
     color: #37C77F;
 }

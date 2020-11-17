@@ -2,13 +2,13 @@ import React from 'react';
 
 import './styles.css';
 
-export default function InputYesNo({ id }) {
+export default function InputYesNo({ id, ...rest }) {
     var idYes = 'yes' + id;
     var idNo = 'no' + id;
     var name = 'yesorno' + id;
 
     return (
-        <div className="radio-container">
+        <div className="radio-container" {...rest}>
             <input className="input-radio" type="radio" id={idYes} name={name} value={true} />
             <label className="radio-label radio-label-yes font-color-radio" htmlFor={idYes}>Sim</label>
             <input className="input-radio" type="radio" id={idNo} name={name} value={false} />
