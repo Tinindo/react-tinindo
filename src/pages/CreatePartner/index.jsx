@@ -16,7 +16,7 @@ import InputYesNo from '../../components/InputYesNo';
 import './styles.css';
 
 export default function CreatePartner() {
-    let { handleAuthentication } = useContext(Context);
+    const { handleAuthentication } = useContext(Context);
 
     const [specialties, setSpecialties] = useState([]);
 
@@ -62,10 +62,10 @@ export default function CreatePartner() {
                 birth_date: parsedBirthDate,
                 accepts_mensal_proposals: acceptsMensalProposals,
                 value_per_day: valuePerDay,
-                specialties,
+                specialties: partnerSpecialties,
             });
 
-            console.log(response);
+            console.log(response.message);
 
             const loginResponse = await api.post('/sessions', {
                 email,
@@ -85,6 +85,18 @@ export default function CreatePartner() {
 
             history.push('/parceiros');
         })();
+    }
+
+    function handleSelectSpecialty(specialty) {
+        const selectedSpecialty = partnerSpecialties.findIndex(spec => spec === specialty);
+
+        if (selectedSpecialty >= 0) {
+            const selectedSpecialties = partnerSpecialties.filter(spec => spec !== specialty);
+            setPartnerSpecialties(selectedSpecialties);
+        } else {
+            setPartnerSpecialties([...partnerSpecialties, specialty]);
+        }
+
     }
 
     return (
@@ -158,8 +170,8 @@ export default function CreatePartner() {
                                     name={specialty.specialty_id}
                                     label={specialty.specialty_name}
                                     key={specialty.specialty_id}
-                                    onChange={(event) => setPartnerSpecialties([...partnerSpecialties, event.target.value])}
-                                    value={specialty.specialty_id} />
+                                    value={specialty}
+                                    onClick={handleSelectSpecialty} />
                             )}
                         </div>
 

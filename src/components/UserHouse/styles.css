@@ -1,0 +1,22 @@
+#user-house {
+    max-width: 60rem;
+    height: 9rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    border: solid 1px var(--color-line-in-white);
+    border-radius: 2rem;
+}
+
+#user-house img {
+    width: 5rem;
+    height: 5rem;
+    grid-column-start: 1;
+    margin: 0 2rem;
+    align-self: flex-start;
+}
+
+#address {
+    align-self: baseline;
+    grid-column-start: 2;
+}

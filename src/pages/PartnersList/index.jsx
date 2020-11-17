@@ -12,6 +12,17 @@ export default function PartnersList() {
     const [partners, setPartners] = useState([]);
 
     useEffect(() => {
+        const { user_id } = JSON.parse(localStorage.getItem('user'));
+
+        api.get(`/users/${user_id}`)
+            .then((response) => {
+                console.log(response);
+                localStorage.setItem('userDetails', JSON.stringify(response.data));
+            })
+            .catch((error) => console.error(error));
+    }, []);
+
+    useEffect(() => {
         api.get('/partners')
             .then((response) => {
                 console.log(response);

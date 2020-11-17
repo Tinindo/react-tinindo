@@ -9,6 +9,7 @@ import PartnersList from './pages/PartnersList';
 import CreatePartner from './pages/CreatePartner';
 import Landing from './pages/Landing';
 import CreateHouse from './pages/CreateHouse';
+import ScheduleService from './pages/ScheduleService';
 
 function CustomRoute({ isPrivate, ...rest }) {
     const { authenticated, loading } = useContext(Context);
@@ -18,7 +19,7 @@ function CustomRoute({ isPrivate, ...rest }) {
     }
 
     if (isPrivate && !authenticated) {
-        return <Redirect to='/' />
+        return <Redirect to='/' />;
     }
 
     return <Route {...rest} />;
@@ -31,6 +32,7 @@ export default function Routes() {
             <CustomRoute path='/cadastrar-usuario' exact component={CreateUser} />
             <CustomRoute path='/virar-parceiro' exact component={CreatePartner} />
             <CustomRoute path='/parceiros' isPrivate exact component={PartnersList} />
+            <CustomRoute path='/agendar' isPrivate exact component={ScheduleService} />
             <CustomRoute path='/login' exact component={Login} />
             <CustomRoute path='/' exact component={Landing} />
         </Switch>

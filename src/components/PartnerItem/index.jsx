@@ -8,6 +8,10 @@ import scheduleIcon from '../../assets/images/schedule-icon.png';
 import './styles.css';
 
 export default function PartnerItem({ partner }) {
+    function handleClickPartner() {
+        localStorage.setItem('partner', JSON.stringify(partner));
+    }
+
     const DEFAULT_IMAGE_URL = 'https://www.flaticon.com/svg/static/icons/svg/1619/1619817.svg';
 
     return (
@@ -25,7 +29,7 @@ export default function PartnerItem({ partner }) {
 
             <footer>
                 <div>
-                    <Link to='/agendar'>
+                    <Link onClick={handleClickPartner} to='/agendar'>
                         <img src={scheduleIcon} alt='Agendar serviço' />
                         <p>Agendar serviço</p>
                     </Link>

@@ -122,6 +122,10 @@ input:checked+.lbm-check::before {
     position: relative;
 }
 
+#login-form {
+    width: 100%;
+}
+
 .link-style {
     text-decoration: none;
     color: #8FA7B3;

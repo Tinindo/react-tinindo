@@ -31,7 +31,7 @@ export default function UserMenu() {
                     <img id='logout-icon' src={logoutIcon} alt='Logout' />
                 </Link>
                 <img id='avatar' src={userData.avatar || DEFAULT_USER_AVATAR} alt='Avatar' />
-                <h3>Bem vindo, {userData.first_name}</h3>
+                <h3>Bem vindo(a), {userData.first_name}</h3>
             </header>
 
             <br /> <br />
@@ -43,7 +43,6 @@ export default function UserMenu() {
                 <GreenButton label='Minha agenda' onClick={() => history.push('/agenda')} />
                 <GreenButton label='Meu histórico' onClick={() => history.push('/historico')} />
                 <GreenButton label='Cadastrar imóvel' onClick={() => history.push('/cadastrar-imovel')} />
-
             </article>
         </nav>
     );

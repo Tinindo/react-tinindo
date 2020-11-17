@@ -59,7 +59,7 @@ export default function Login() {
                 {authError &&
                     <ErrorMessage message='Combinação de usuário e senha inválidas' />}
                 <div className="content-left column">
-                    <form onSubmit={handleLogin}>
+                    <form id='login-form' onSubmit={handleLogin}>
                         <Input
                             label='E-mail'
                             type="email"
