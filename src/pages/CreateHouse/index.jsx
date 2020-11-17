@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Context } from '../../contexts/AuthContext';
+import arrowIcon from '../../assets/images/arrow-back.png';
 
 import UserMenu from '../../components/UserMenu';
 import GreenButton from '../../components/GreenButton';
-import CheckBox from '../../components/CheckBox';
 import Input from '../../components/Input';
 
 import './styles.css';
@@ -16,7 +16,7 @@ export default function CreateHouse() {
     const [complement, setComplement] = useState('');
     const [neighborhood, setNeighborhood] = useState('');
     const [city, setCity] = useState('');
-    const [postalCode , setPostalCode] = useState('');
+    const [postalCode, setPostalCode] = useState('');
     const [state, setState] = useState('');
     const [bedroom, setBedroom] = useState('');
     const [garage, setGarage] = useState('');
@@ -56,6 +56,10 @@ export default function CreateHouse() {
             <UserMenu />
 
             <main>
+                <Link to='/parceiros'>
+                    <img src={arrowIcon} alt='Voltar' />
+                </Link>
+
                 <h1>Cadastrar Imóvel</h1>
 
                 <form onSubmit={handleCreateHouse}>
@@ -142,7 +146,7 @@ export default function CreateHouse() {
                             type='number'
                             onChange={(event) => setKitchen(event.target.value)}
                         />
-                        
+
 
                         <GreenButton label='Cadastrar' />
 

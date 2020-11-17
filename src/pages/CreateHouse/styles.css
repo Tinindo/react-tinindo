@@ -10,6 +10,7 @@
     margin: 3.2rem auto;
     width: 80%;
     background-color: white;
+    padding: 2rem 4rem;
     border: 1px solid #D3E2E5;
     box-sizing: border-box;
     grid-column-start: 2;
@@ -39,19 +40,15 @@
     padding: 0 2.4rem;
 }
 
-#page-create-house main form fieldset+fieldset {
-    margin-top: 6.4rem;
-}
-
 #page-create-house main form button {
     align-self: center;
 }
 
-.div-container{
+.div-container {
     margin: 1% 0% 20% 5%;
 }
 
-.textarea-style{
+.textarea-style {
     border-color: #D3E2E5;
     margin: 1% 0%;
     color: #8FA7B3;
